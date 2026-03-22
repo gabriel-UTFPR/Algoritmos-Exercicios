@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CRUD Boletim</title>
+</head>
+
+<body>
+
+   <h1>Cadastro de Boletim</h1>
+
+   <label for="inputMateria">Matéria</label>
+   <input type="text" name="inputMateria" id="inputMateria">
+   <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+   <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+   <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+   <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+   <br><br>
+
+   <label for="inputN1">Nota 1</label>
+   <input type="number" name="inputN1" id="inputN1">
+   <br>
+   <label for="inputN2">Nota 2</label>
+   <input type="number" name="inputN2" id="inputN2">
+   <br>
+   <label for="inputN1">Nota 3</label>
+   <input type="number" name="inputN3" id="inputN3">
+   <br>
+   <label for="inputN4">Nota 4</label>
+   <input type="number" name="inputN4" id="inputN4">
+   <br>
+   
+   
+
+   <br><br>
+   <div id="divAviso" style="background-color: antiquewhite;"></div>
+   <br>
+   <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+   <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+   <br><br>
+   <!-- <input type="button" value="Listar" onclick="listar()">
+    <br><br> -->
+
+   <div id="outputSaida" style="background-color: aqua;">...</div>
+   
+
+   <input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+   <input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()"><br>
+   
+   <h1>Calcular Médias</h1>
+   <input type="button" value="Calcular"  onclick="Media()">
+   <div id="outputSaidaMedia" style="background-color: rgb(249, 14, 14);">...</div>
+   <script src="./Boletim.js"></script>
+   <script src="./BoletimControl.js"></script>
+</body>
+
+</html>

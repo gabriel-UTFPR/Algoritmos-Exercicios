@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>Cadastro de alunos</h1>
+    <input type="text"  id="inputRA" placeholder="digite o R.A">
+    <input type="text"  id="inputNome" placeholder="digite o nome">
+    <input type="text"  id="inputCurso" placeholder="digite o curso"><br>
+    <input type="button" value="inserir" onclick="inserir()"><br>
+    <h1>Busca de alunos pelo R.A</h1>
+    <input type="text" id="RAproc" placeholder="digite o R.A."><br>
+    <input type="button" value="buscar" onclick="procurarRA()"><br>
+    <h1>Busca de alunos pelo curso </h1>
+    <input type="text"  id="cursoproc" placeholder="digite o curso"><br>
+    <input type="button" value="buscar" onclick="procurarcurso()">
+    <h1>Lista de alunos</h1>
+    <div id="outputlista" style="background-color: rgb(76, 109, 218);"></div>
+    <script src="Aluno.js"></script>
+    <script src="AlunoControl.js"></script>
+</body>
+</html>

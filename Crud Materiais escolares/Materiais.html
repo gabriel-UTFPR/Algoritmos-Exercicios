@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Materiais</title>
+</head>
+
+<body>
+
+<h1>Cadastro de Materiais</h1>
+
+<label for="inputid">id</label>
+<input type="number" name="inputid" id="inputid">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br><br>
+
+<label for="inputnome">Nome</label>
+<input type="text" name="inputnome" id="inputnome"><br>
+<label for="inputcategoria">Categoria</label>
+<select name="inputcategoria" id="inputcategoria">
+    <option value="">selecione</option>
+    <option value="Caneta">Caneta</option>
+    <option value="Lápis">lápis</option>
+    <option value="Caderno">caderno</option>
+    <option value="Borracha">borracha</option>
+    <option value="Régua">régua</option>
+</select><br>
+<label for="inputestoque">Estoque</label>
+<input type="number" name="inputestoque" id="inputestoque"><br>
+<label for="inputpreço">Preço</label>
+<input type="number" name="inputpreço" id="inputpreço"><br>
+<div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<h1>Procurar por Categoria</h1>
+<select name="inputpcategoria" onchange="Procurar()" id="inputpcategoria">
+    <option value="">todos</option>
+    <option value="Caneta">Caneta</option>
+    <option value="Lápis">lápis</option>
+    <option value="Caderno">caderno</option>
+    <option value="Borracha">borracha</option>
+    <option value="Régua">régua</option>
+</select><br>
+<div id="outputSaida2" style="background-color: rgb(231, 160, 28);">...</div>
+<script src="./Materiais.js"></script>
+<script src="./MateriaisControl.js"></script>
+
+</body>
+
+</html>
