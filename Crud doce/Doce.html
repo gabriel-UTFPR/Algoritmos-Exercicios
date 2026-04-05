@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Doce</title>
+</head>
+
+<body>
+
+<h1>Cadastro de Doce</h1>
+
+<label for="inputcodigo">codigo</label>
+<input type="number" name="inputcodigo" id="inputcodigo">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br><br>
+
+<label for="inputmarca">marca</label>
+<input type="text" name="inputmarca" id="inputmarca"><br>
+<label for="inputfeitodeq">feitodeq</label>
+<input type="text" name="inputfeitodeq" id="inputfeitodeq"><br>
+<label for="inputpreço">preço</label>
+<input type="number" name="inputpreço" id="inputpreço"><br>
+<label for="inputestoque">estoque</label>
+<input type="number" name="inputestoque" id="inputestoque"><br>
+<div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<script src="./Doce.js"></script>
+<script src="./DoceControl.js"></script>
+
+</body>
+
+</html>

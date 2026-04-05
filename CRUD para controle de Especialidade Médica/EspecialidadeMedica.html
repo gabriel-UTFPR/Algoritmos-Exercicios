@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD EspecialidadeMedica</title>
+</head>
+
+<body>
+
+<h1>Cadastro de EspecialidadeMedica</h1>
+
+<label for="inputidEspecialidade">id_Especialidade</label>
+<input type="number" name="inputidEspecialidade" id="inputidEspecialidade">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br><br>
+
+<label for="inputnomeEspecialidade">nome_Especialidade</label>
+<input type="text" name="inputnomeEspecialidade" id="inputnomeEspecialidade"><br>
+<label for="inputareaAtuacao">area_Atuacao</label>
+<input type="text" name="inputareaAtuacao" id="inputareaAtuacao"><br>
+<label for="inputtempoFormacaoAnos">tempo_Formacao_Anos</label>
+<input type="number" name="inputtempoFormacaoAnos" id="inputtempoFormacaoAnos"><br>
+<label for="inputconselhoRegional">conselho_Regional</label>
+
+<select id="inputconselhoRegional">
+<option value="">Selecione uma opção</option>
+<option value="CRM - Conselho Regional de Medicina - médicos">CRM - Conselho Regional de Medicina - médicos</option>
+<option value="CRO - Conselho Regional de Odontologia -  dentistas">CRO - Conselho Regional de Odontologia -  dentistas</option> 
+<option value="CRP - Conselho Regional de Psicologia -  psicólogos">CRP - Conselho Regional de Psicologia -  psicólogos</option> 
+<option value="COREN - Conselho Regional de Enfermagem -  enfermeiros e técnicos de enfermagem">COREN - Conselho Regional de Enfermagem -  enfermeiros e técnicos de enfermagem</option> 
+<option value=" CREFITO - Conselho Regional de Fisioterapia e Terapia Ocupacional -  fisioterapeutas e terapeutas ocupacionais"> CREFITO - Conselho Regional de Fisioterapia e Terapia Ocupacional -  fisioterapeutas e terapeutas ocupacionais</option> 
+<option value="CRF - Conselho Regional de Farmácia -  farmacêuticos">CRF - Conselho Regional de Farmácia -  farmacêuticos</option> 
+<option value="CRN - Conselho Regional de Nutricionistas -  nutricionistas">CRN - Conselho Regional de Nutricionistas -  nutricionistas</option> 
+<option value="CREF - Conselho Regional de Educação Física - profissionais de educação física">CREF - Conselho Regional de Educação Física - profissionais de educação física</option> 
+<option value="CRBM - Conselho Regional de Biomedicina -  biomédicos">CRBM - Conselho Regional de Biomedicina -  biomédicos</option> 
+<option value="CRFA - Conselho Regional de Fonoaudiologia -  fonoaudiólogos">CRFA - Conselho Regional de Fonoaudiologia -  fonoaudiólogos</option> 
+</select>
+
+
+
+
+<div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<script src="./EspecialidadeMedica.js"></script>
+<script src="./EspecialidadeMedicaControl.js"></script>
+
+</body>
+
+</html>

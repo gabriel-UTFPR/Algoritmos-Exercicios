@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>Adicionar produtos a lista</h2>
+
+    <input type="text" id="produto" placeholder="Digite o produto">
+    
+    <input type="text" id="quantidade" placeholder="Digite a quantidade">
+    
+    <input type="text" id="preço" placeholder="Digite o preço">
+    
+    
+    <button onclick="adicionar()">Adicionar</button><br>
+    <button onclick="subtotal()">calcular</button><br>
+    
+    
+    
+    
+    <button onclick="listar()">listar</button>
+    
+    <p id="lista">[]</p>
+    <h1>subtotal</h1>
+    <p id="subtotal">[]</p>
+    <p id="total">[]</p>
+
+
+    
+    <script src="./produto.js"></script>
+    <script src="./compras.js"></script>
+   
+    
+</body>
+</html>
