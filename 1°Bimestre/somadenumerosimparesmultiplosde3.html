@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soma de todos os números ímpares múltiplos de 3 de 1 até 500.</h1>
+    <input type="button" value="Processar" onclick="processar()">
+    <br>
+    <span id="spanResposta">...</span>
+    <script>
+        function processar(){
+            debugger
+             soma=0;
+            for(let i=0;i<=500;i+=3){
+                if(i%2!=0){
+                    soma=soma+i
+            }
+        }
+            document.getElementById("spanResposta").innerHTML=soma;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Faça um programa que leia uma série de números inteiros e some esses números.-->
+
+    <label for="numeros">Digite números:</label>
+    <input type="text" id="numeros">
+    <br>
+    <button onclick="ler()">somar</button>
+    <br>
+    <label for="saida">Soma:</label>
+    <span id="saida"></span>
+  <script>
+  function ler(){
+    debugger
+     numeros= document.getElementById("numeros").value;
+     let conjuntoTexto= numeros.split(",");
+     let conjuntoNumerico= [];
+      let tudoCerto = true;
+            for (let i = 0; i < conjuntoTexto.length; i++) {
+                let texto = conjuntoTexto[i].trim();
+                let numero = parseInt(texto);
+
+                if (!isNaN(numero)) {
+                    conjuntoNumerico.push(numero);
+                } else {
+                    alert("Usuário querido, por favor coloque apenas números separados por vírgulas no input.");
+                    tudoCerto = false;
+                    break;
+                }
+            }
+
+            if (tudoCerto) {
+                let soma = conjuntoNumerico.reduce((acc, val) => acc + val, 0);
+                document.getElementById("saida").innerText = soma;
+            } else {
+                document.getElementById("saida").innerText = "Algo está errado na entrada de dados.";
+            }
+        }
+    </script>
+    
+
+    
+
+  
+
+
+  
+      
+</body>
+</html>

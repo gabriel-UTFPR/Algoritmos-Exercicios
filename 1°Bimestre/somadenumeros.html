@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="numero">numero</label>
+    <input type="number" id="numero" placeholder="Digite um numero" >
+    <br>
+    <input type="button" value="somar" onclick="somar()">
+    <br>
+    <span id="spanResposta">...</span>
+    <script>
+        function somar(){
+        let numero=document.getElementById("numero").value;
+        let soma=0;
+        let conj="";
+        for(let i=0; i<=numero.length-1;i++){
+            
+                soma=soma+parseInt(numero[i]);
+                conj=conj+numero[i]+"+";
+
+            
+        }
+        
+        document.getElementById("spanResposta").innerHTML=soma +"("+conj+")";
+        }
+    
+    </script>
+
+</body>
+</html>
