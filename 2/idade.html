@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Faça um algoritmo que permita ao usuário informar a idade de quantas pessoas ele desejar. Após isso o algoritmo deve:
+
+     contar quantas pessoas tem mais de 21 anos
+     contar quantas pessoas nasceram em anos bissextos
+     somar todas as idades
+     calcular a média das idades-->
+      <label for="idade">Idades</label>
+    <input type="text" id="idade" placeholder="Ex: 25,30,40,95" >
+    <br>
+    <input type="button" value="Processar" onclick="processar()">
+    <br>
+    <span id="spanResposta">...</span>
+    <script>
+        function processar(){
+            debugger
+            let idade=document.getElementById("idade").value.split(",");
+            let pessoas21=Pessoas21(idade);
+            let bissextos=Bissextos(idade);
+            let soma=Soma(idade);
+            let total=idade.length;
+            let media= soma/total;
+            let resp="Total de Pessoas: "+total+"<br>"+
+            "Pessoas com +21: "+pessoas21+"<br>"+
+            "Pessoas que nasceram em anos bissextos: "+bissextos+"<br>"+
+            "Soma de todas as idades: "+soma+"<br>"+
+            "Média das idades: "+media.toFixed(2);
+
+           document.getElementById("spanResposta").innerHTML=resp;
+        }
+        function Pessoas21(idade){
+            let cont=0;
+            for(let i=0;i<=idade.length-1;i++){
+                if(parseInt(idade[i])>21){
+                    cont++
+                }
+            }
+            return cont
+        }
+        function Bissextos(idade){
+            let cont=0;
+            let anoatual= new Date().getFullYear();
+            let anonascimento=0;
+            for(let i = 0;i<=idade.length-1;i++){
+                anonascimento=anoatual-parseInt(idade[i]);
+                if(anonascimento%4==0){
+                    cont++
+                }
+            }
+            return cont
+        }
+        function Soma(idade){
+            let soma=0;
+            for(let i=0;i<=idade.length-1;i++){
+                soma=soma+parseInt(idade[i]);
+            }
+            return soma
+        }
+       
+
+    </script>
+</body>
+
+</html>

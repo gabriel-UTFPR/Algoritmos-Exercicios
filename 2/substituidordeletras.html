@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="frase">Frase</label>
+    <input type="text" id="frase" placeholder="Digite uma frase" style="width: 80%;">
+    <br><br>
+    <label for="letra">Letra que deseja Substituir</label>
+    <input type="text" id="letra" placeholder="Digite uma letra" >
+    <br><br>
+     <label for="letrasubs">Letra para Substituir</label>
+    <input type="text" id="letrasubs" placeholder="Digite uma letra" >
+    <br><br>
+    <input type="button" value="substitui" onclick="Substituir()">
+    <br>
+    <span id="spanResposta">...</span>
+
+    <script>
+        function Substituir() { 
+            let frase = document.getElementById("frase").value;
+            let letra = document.getElementById("letra").value;
+             let letrasubs = document.getElementById("letrasubs").value;
+            
+             let f= frase.split("");
+            
+             for(let i=0;i<=f.length-1;i++){
+                if(f[i]==letra){
+                    f[i]=letrasubs;
+
+                }
+            }
+             let substituiçao=f.join("");
+            document.getElementById("spanResposta").innerHTML=substituiçao;
+
+
+
+        }
+    </script> 
+</body>
+</html>

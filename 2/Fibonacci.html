@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="termo">Quantidade de termo:</label>
+    <input type="number" id="termo">
+    <br>
+    <button onclick="Fibonacci()">Processar</button>
+    <br>
+    <label for="saida">Sequência:</label>
+    <span id="saida"></span>
+   <script>
+      function Fibonacci(){
+        let termo= parseInt(document.getElementById("termo").value);
+        let A= 0;
+        let B = 1;
+        let resp = A+","+B;
+        
+        for(let i = 0; i < termo-2; i++){
+           let P= A+B;
+            resp= resp+","+P;
+            A=B;
+            B=P;
+        
+        }
+        
+        document.getElementById("saida").innerHTML= resp;
+       }
+ </script> 
+   
+
+</body>
+</html>

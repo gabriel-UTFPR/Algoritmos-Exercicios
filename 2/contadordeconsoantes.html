@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="frase">Frase</label>
+    <input type="text" id="frase" placeholder="Digite uma frase" style="width: 80%;">
+    <br>
+    <input type="button" value="contar" onclick="contador()">
+    <br>
+    <span id="spanResposta">...</span>
+
+    <script>
+        function contador(){
+            let frase= document.getElementById("frase").value.toLowerCase();
+            let f=frase.split("");
+            cont=0;
+            for(let i=0;i<=f.length-1;i++){
+                if(f[i]=="a"||f[i]=="e"||f[i]=="o"||f[i]=="i"||f[i]=="u"||f[i]==" "){
+                    
+
+                }else{
+                    cont++
+                }
+
+            }
+            document.getElementById("spanResposta").innerHTML=cont+" consoantes";
+        }
+
+    </script>
+
+</body>
+</html>

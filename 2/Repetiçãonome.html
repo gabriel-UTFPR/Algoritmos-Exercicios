@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Escreva um nome 10 vezes em linhas diferentes. 
+    Faça um programa que leia um nome e escreva esse nome 10 vezes, em linhas diferentes.-->
+    <label for="Nome">Nome:</label>
+    <input type="text" id="nome">
+    <br>
+    <button onclick="Escrever()">Escrever</button>
+    <br>
+    <label for="saida"></label>
+    <span id="saida"></span>
+   <script>
+    function Escrever(){
+        let nome= document.getElementById("nome").value;
+        let aux ="";
+        for(let cont=1;cont<=10;cont++){
+            aux= aux+"<br>"+nome;
+        }
+        document.getElementById("saida").innerHTML= aux;
+    }
+   </script>
+
+</body>
+</html>

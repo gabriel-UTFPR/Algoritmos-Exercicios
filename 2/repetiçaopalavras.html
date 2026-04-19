@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="frase">Frase</label>
+    <input type="text" id="frase" placeholder="Digite uma frase" >
+    <br>
+    <label for="palavra">Palavra para ser verificada</label>
+    <input type="text" id="palavra" placeholder="Digite uma palavra" >
+    <br><br>
+    <input type="button" value="conta palavras" onclick="recebe()">
+    <span id="spanResposta">...</span>
+    <script>
+        function recebe(){
+            let frase= document.getElementById("frase").value;
+            let palavra= document.getElementById("palavra").value;
+            
+            let f = frase.split(" ");
+            
+            let cont=0;
+            
+            for(let i=0;i<=f.length-1;i++){
+                if(f[i]==palavra){
+                    cont++;
+                }
+            }
+            document.getElementById("spanResposta").innerHTML=cont;
+        }
+
+
+    </script>
+</body>
+</html>

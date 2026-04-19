@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta a quantidade de palavras na frase</title>
+</head>
+
+<body>
+    <label for="frase">Frase</label>
+    <input type="text" id="frase" placeholder="Digite uma frase" style="width: 80%;">
+    <br>
+    <input type="button" value="tirar espaços" onclick="tiraespaços()">
+    <br>
+    <span id="spanResposta">...</span>
+    <script>
+        function tiraespaços(){
+            let frase= document.getElementById("frase").value; 
+            let f = frase.trim(" "); 
+            
+           
+            document.getElementById("spanResposta").innerHTML=f;
+        }
+    
+    </script>
+</body>

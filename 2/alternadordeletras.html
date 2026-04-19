@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="frase">Frase</label>
+    <input type="text" id="frase" placeholder="Digite uma frase" style="width: 80%;">
+    <br>
+    <input type="button" value="alternar" onclick="alternador()">
+    <br>
+    <span id="spanResposta">...</span>
+
+    <script>
+        function alternador() { 
+            let frase = document.getElementById("frase").value;
+            let f=frase.split("");
+            for(let i=0; i<=f.length-1;i++){
+                if(f[i]==f[i].toLowerCase()){
+                    f[i]=f[i].toUpperCase()
+                }else{
+                    f[i]=f[i].toLowerCase();
+                }
+            }
+            let unido = f.join("");
+        document.getElementById("spanResposta").innerHTML=unido;
+        }
+        
+   </script>
+<body>

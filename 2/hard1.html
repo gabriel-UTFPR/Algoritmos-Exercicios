@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Escrever um algoritmo que leia um número não determinado de valores e 
+    calcule a média aritmética dos valores lidos, a quantidade de valores positivos, 
+    a quantidade de valores negativos e o percentual de valores negativos e positivos.-->
+     <label for="numero">Digite alguns números</label>
+    <input type="text" id="numero" placeholder="Digite um numero" >
+    <br>
+    <input type="button" value="Processar" onclick="processar()">
+    <br>
+    <span id="spanResposta">...</span>
+    <script>
+        function processar(){
+            debugger
+            let numero= document.getElementById("numero").value.split(",");
+            let media= Media(numero);
+            let negativos= Negativos(numero);
+            let positivos= Positivos(numero);
+            let total=numero.length
+            let percentualnegativos= (negativos*100)/total;
+            let percentualpositivos= (positivos*100)/total;
+            let resp="Média: "+media.toFixed(2)+"<br>"+"Total de números:"+total+"<br>"+"Quantidade de números positivos: "+positivos+"<br>"+"Quantidade de números negativos: "+negativos+
+            "<br>"+ "Percentual de números negativos: "+percentualnegativos.toFixed(1)+"%"+
+            "<br>"+ "Percentual de números positivos: "+percentualpositivos.toFixed(1)+"%" ;
+            document.getElementById("spanResposta").innerHTML=resp;
+
+        }
+        function Media(numero){
+            let m=0;
+            let soma=0;
+            for(let i=0;i<=numero.length-1;i++){
+                soma=soma+parseInt(numero[i]);
+
+            }
+            m=soma/numero.length;
+            return m
+        }
+        function Negativos(numero){
+            let cont=0;
+            for(let i=0;i<=numero.length-1;i++){
+                if(parseInt(numero[i])<0){
+                    cont++;
+                }
+            }
+            return cont
+        }
+        function Positivos(numero){
+            let cont=0;
+            for(let i=0;i<=numero.length-1;i++){
+                if(parseInt(numero[i])>0){
+                    cont++;
+                }
+            }
+            return cont
+        }
+    </script>
+</body>
+</html>

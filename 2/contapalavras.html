@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta a quantidade de palavras na frase</title>
+</head>
+
+<body>
+    <label for="inputFrase">Frase</label>
+    <input type="text" id="inputFrase" placeholder="Digite uma frase" style="width: 80%;">
+    <br>
+    <input type="button" value="conta palavras" onclick="procurarPalavras()">
+    <br>
+    <span id="spanResposta">...</span>
+
+    <script>
+        function procurarPalavras() { 
+            debugger;
+            let frase = document.getElementById("inputFrase").value;  
+                                                                       
+            let resposta = contapalavras(frase); 
+            document.getElementById("spanResposta").innerHTML = resposta; 
+        }
+        function contapalavras(frase){
+            let f= frase.split(" ");
+
+           
+            return f.length 
+        }
+     </script>
+<body>    

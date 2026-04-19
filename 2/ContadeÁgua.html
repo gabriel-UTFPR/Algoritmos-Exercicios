@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de consumo de Água e Esgoto (demais localidades)</title>
+</head>
+<body>
+    <h1>Calcule o valor a pagar em função do volume (m³) consumido.</h1>
+    <label for="consumo">Consumo (em m³):</label>
+    <input type="number" id="consumo" min=0 placeholder="digite seu consumo" >
+    <br>
+    <button onclick="receber()">Calcular</button>
+    <br>
+    <span id="saida">...</span>
+    <script>
+        function receber(){
+            let consumo = parseFloat(document.getElementById("consumo").value);
+            let resp= Claudete(consumo);
+            document.getElementById("saida").innerHTML=resp;
+        }
+        function Claudete(consumo){
+            let valor= 0;
+            if(consumo<=5){
+                valor= 94.19;
+            }else if(consumo<=10){
+                valor= 94.19+ 2.91*(consumo-5);
+            }else if(consumo<=15){
+                valor= 108.74+ 16.23*(consumo-10);
+            }else if(consumo<=20){
+                valor= 189.89+ 16.31*(consumo-15);
+            }else if(consumo<=30){
+                valor= 271.44+ 16.45*(consumo-20);
+            }else{
+                valor= 435.94+ 27.84*(consumo-30);
+            }
+            resp = "O  valor a pagar é R$ "+ valor.toFixed(2);
+            return resp
+        }
+    </script>
+</body>
+</html>
