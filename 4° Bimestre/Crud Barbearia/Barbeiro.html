@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Barbeiro</title>
+</head>
+
+<body>
+
+<h1>Cadastro de Barbeiro</h1>
+
+<label for="inputidBarbeiro">idBarbeiro</label>
+<input type="number" name="inputidBarbeiro" id="inputidBarbeiro">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br><br>
+
+<label for="inputnome">nome</label>
+<input type="text" name="inputnome" id="inputnome"><br>
+<label for="inputespecialidade">especialidade</label>
+<select id="inputespecialidade">
+    <option value=""> Selecione uma opção </option>
+        <option value="Cabelo">Cabelo</option>
+        <option value="Barba">Barba</option>
+        <option value="Sobrancelha">Sobrancelha</option>
+  </select><br>    
+<label for="inputtempoExperiencia">tempoExperiencia</label>
+<input type="number" name="inputtempoExperiencia" id="inputtempoExperiencia"><br>
+<label for="inputnivel">nivel</label>
+<select id="inputnivel">
+    <option value=""> Selecione uma opção </option>
+        <option value="Iniciante">Iniciante</option>
+        <option value="Experiente">Experiente</option>
+        <option value="Profissional">Profissional</option>
+  </select><br>
+<label for="inputatuando">atuando</label>
+<input type="checkbox" name="inputatuando" id="inputatuando"><br>
+<label for="inputdataAdmissao">dataAdmissao</label>
+<input type="date" name="inputdataAdmissao" id="inputdataAdmissao"><br>
+<div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br>
+
+
+
+<h1> Localizar barbeiro pelo nome</h1>
+<input type="text" name="nome" id="nome">
+<input type="button" value="procurar" onclick="procurar()"><br>
+
+<h1>Filtrar por especialidade</h1>
+<input type="text" name="especialidade" id="especialidade">
+<input type="button" value="filtrar" onclick="filtrar()">
+
+<h1>Listar por faixa de anos de experiência</h1>
+<input type="number" name="ano1" id="ano1">
+<input type="number" name="ano2" id="ano2">
+<input type="button" value="listar" onclick="listafaixa()">
+
+<h1>Filtrar por Sobrenome</h1>
+<input type="text" name="sobrenome" id="sobrenome">
+<input type="button" value="filtrar" onclick="filtrarsobrenome()"><br><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<input type="button" value="voltar Lista completa" onclick="listar()"><br>
+</body>
+
+<script src="./Barbeiro.js"></script>
+<script src="./BarbeiroControl.js"></script>
+</html>
